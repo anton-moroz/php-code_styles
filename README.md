@@ -78,3 +78,24 @@ All the arrays should be declared using `[]` instead of `array()`
 ```php
 $list = ['item1', 'item2'];
 ```
+
+## Control structures (return, break, exit, continue)
+If there is any code except for code block start before `return`, `exit`, `exit`, `continue` - there should be empty line before this control structure.
+```
+$ships = Ship::all();
+$cargoShip = null;
+
+foreach ($ships as $ship) {
+    if ($ship->isCargo()) {
+        $cargoShip = $ship;
+
+        continue;        
+    }
+  
+    if ($ship->isLiner()) {
+        echo $ship->name();
+    }
+}
+
+return true;
+```
